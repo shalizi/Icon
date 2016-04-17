@@ -1,0 +1,445 @@
+
+<style>
+
+#test{
+  color: white;
+}
+p{
+
+   margin-top: 5px;
+   margin-bottom: 0px;
+   font-size: 14px;
+}
+.textCenter{
+  text-align: center;
+}
+#loanForm{
+  border: 3px solid whitesmoke;
+  padding: 30px;
+  padding-left: 45px;
+  margin: 15px;
+
+
+}
+.btn-xlarge {
+    color: #2a6496;
+    padding: 18px 28px;
+    font-size: 16px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    }
+ 
+ 
+  .centerBlock {
+  display: table;
+  margin: 0 auto;
+}
+
+  input{
+     height: 40px;
+   width: 253px;
+   padding-left: 5px;
+
+  }
+
+
+
+
+
+input.ng-invalid.ng-touched{
+  border: 1px solid #DA3637;
+}
+input.ng-valid.ng-touched{
+  border: 1px solid #509D12;
+}
+.error{
+  color: #DA3637;
+
+}
+
+#firstname{
+  height: 45px;
+  padding-left:17px;
+  width: 100%;
+
+}
+#lastname{
+   height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#emailaddress{
+   height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#telephonenumber{
+   height: 45px;
+  padding-left:17px;
+width: 100%;
+}
+#addressinformation{
+   height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#city{
+   height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#state{
+   height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#zip{
+   height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#ss{
+   height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#birthday{
+   height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#residence{
+   height: 45px;
+  padding-left:17px;
+  width: 100%;
+
+}
+#timeatresidence{
+  height: 45px;
+  padding-left:17px;
+  width: 100%;
+
+}
+#monthlyhousingpayment{
+     height: 45px;
+  padding-left:17px;
+width: 100%;
+}
+#monthlyincome{
+    height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#employer{
+   height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#jobtitle{
+  height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#lengthofemployment{
+  height: 45px;
+  padding-left:17px;
+  width: 100%;
+
+}
+
+#ppdiv{
+  
+  padding: 15px;
+
+}
+#pp{
+font-size: 60;
+font-weight: 600;
+margin-right: 10px;
+}
+#message{
+  color: purple;
+  
+}
+
+</style>
+  
+
+<h1 id="test">This is consignment page.</h1>
+
+
+
+<div class="container-fluid " ng-controller="loanCtrl">
+  <div class="row ">
+    <div  class="col-xs-12 col-sm-6 col-sm-offset-3 ">
+      <div class="row">
+         <h3 class="textCenter">Quick Loan Application</h3>
+          <p class="textCenter">We recognize our customers need and desire to preserve their privacy and confidentiality</p>
+          <p ng-show="message"><strong id="message">{{message}}</strong></p>
+
+        <div id="loanForm">
+        
+          <form name="loanForm" novalidate class="centerBlock" ng-submit="loanApplication(user)">
+            <fieldset> <!-- start here -->
+               <legend class="loanSubTitle">Contact Information</legend>
+                     <div class="row">
+
+                        <div class="col-xs-12 col-md-6">
+                           <p>First Name</p>
+                           <input type="text" id="firstname" name="firstname" 
+                           ng-model="user.firstname" ng-required="true">
+                            <p class="error" ng-show="loanForm.firstname.$invalid && loanForm.firstname.$touched">Please enter your name</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                           <p>Last Name</p>
+                           <input type="text" id="lastname" name="lastname" ng-model="user.lastname" ng-required="true">
+                           <p class="error" ng-show="loanForm.lastname.$invalid && loanForm.lastname.$touched">Please enter your last name</p>
+                        </div>
+                     </div>
+
+                      <div class="row">
+                         <div class="col-xs-12 col-md-6">
+                            <p>Email</p>
+                            <input id="emailaddress" type="email" name="email" ng-model="user.email" ng-required="true">
+                            <p class="error" ng-show="loanForm.email.$invalid && loanForm.email.$touched">Make sure you type a valid email address</p>
+                         </div>
+                         <div class="col-xs-12 col-md-6">
+                            <p>Telephone</p>
+                            <input id="telephonenumber" type="number" name="number" ng-model="user.number" ng-required="true">
+                             <p class="error" ng-show="loanForm.number.$invalid && loanForm.number.$touched">Enter your telephone number</p>
+                         </div>
+                      </div>
+
+                      <div class="row">
+                           <div class="col-xs-12 col-md-6">
+                              <p>Address</p>
+                              <input id="addressinformation" type="text" name="address" ng-model="user.address" ng-required="true">
+                              <p class="error" ng-show="loanForm.address.$invalid && loanForm.address.$touched">We need an address here</p>
+                           </div>
+                           <div class="col-xs-12 col-md-6">
+                              <p>City</p>
+                              <input id="city" type="text"  name="city" ng-model="user.city" ng-required="true">
+                              <p class="error" ng-show="loanForm.city.$invalid && loanForm.city.$touched">Please enter the name of city</p>
+                           </div>
+                        </div>
+
+                        <div class="row">
+                           <div class="col-xs-12 col-md-6" >
+                           <p>State</p>
+                              <select id="state"  ng-model="user.state">
+                                <option value="ca" checked>California</option>
+                                <option value="nv">Nevada</option>
+                                <option value="or">Oregon</option>
+                                <option value="wa">Washington</option>
+                              </select> 
+                           </div>
+                           <div class="col-xs-12 col-md-6">
+                             <p>Zipcode</p>
+                             <input id="zip" type="number"  name="zip" ng-model="user.zip" ng-required="true">
+                             <p class="error" ng-show="loanForm.zip.$invalid && loanForm.zip.$touched">Enter your zipcode</p>
+                           </div>
+                        </div> 
+
+
+            </fieldset>
+            <br><br>
+                   <fieldset>
+
+                     <legend class="loanSubTitle">Personal Information</legend>
+                     <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                           <p>Social Security Number</p>
+                           <input  id="ss" type="number"  name="ss" ng-model="user.ss" ng-required="true">
+                           <p class="error" ng-show="loanForm.ss.$invalid && loanForm.ss.$touched">Enter a valid SS number<p>
+                        </div>   
+                        <div class="col-xs-12 col-md-6">
+
+
+
+                           <p>Birthday</p>
+                           <input id="birthday" type="date" name="birthday" ng-model="user.birthday" ng-required="true" >
+                           <p class="error" ng-show="loanForm.birthday.$invalid && loanForm.birthday.$touched">Please enter birthday</p>
+                        </div>
+                     </div>
+
+                     <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                           <p>Residence Type</p>
+                            <select id="residence" ng-model="user.residence">
+                              <option value="own" checked>Own</option>
+                              <option value="rent">Rent</option>
+                              <option value="other">Other</option>
+                           </select> 
+                        </div>   
+                        <div class="col-xs-12 col-md-6">
+                           <p>Time at Residence</p>
+                           <select id="timeatresidence" ng-model="user.timeatresidence">
+                             <option value="less6m" checked>Under 6 Months</option>
+                             <option value="6-12m">6 - 12 Months</option>
+                             <option value="1-2y">1 - 2 Years</option>
+                             <option value="2-5y" checked>2 -5 Years</option>
+                             <option value="5plus">5+ Years</option>
+                           </select>
+                        </div>
+                     </div>
+                     
+                     <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                           <p>Monthly Housing Payment</p>
+                           <select id="monthlyhousingpayment" ng-model="user.monthlyhousingpayment">
+                                <option value="less1k" checked>0 - $ 1,000</option>
+                                <option value="1-2k">$ 1,000 - $ 2,000</option>
+                                <option value="2-3k">$ 2,000 - $ 3,000</option>
+                                <option value="3-5k" checked>$ 3,000 - $ 5,000</option>
+                                <option value="5plus">$ 5000+</option>
+                              </select>   
+                        </div>
+                     </div>
+                  </fieldset>
+<br><br>
+            <fieldset>
+                     <legend class="loanSubTitle">Employment Information</legend>
+
+   
+                     <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                           <p>Employer</p>
+                           <input id="employer" type="text" name="employer" ng-model="user.employer" ng-required="true">
+                           <p class="error" ng-show="loanForm.employer.$invalid && loanForm.employer.$touched">Enter your employer's name</p>
+                        </div> 
+
+                        <div class="col-xs-12 col-md-6">
+                           <p>Job Title</p>
+                           <input id="jobtitle" type="text" name="jobtitle" ng-model="user.jobtitle" ng-required="true">
+                           <p class="error" ng-show="loanForm.jobtitle.$invalid && loanForm.jobtitle.$touched">What is your current job title</p>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                           <p>Length of Employment</p>
+                           <select id="lengthofemployment" ng-model="lengthofemployment">
+                             <option value="less6m" checked>Under 6 Months</option>
+                             <option value="6-12m">6 - 12 Months</option>
+                             <option value="1-2y">1 - 2 Years</option>
+                             <option value="2-5y" checked>2 -5 Years</option>
+                             <option value="5plus">5+ Years</option>
+                           </select>
+
+                        </div>   
+                        <div class="col-xs-12 col-md-6">
+                           <p>Gross Monthly Income</p>
+                           <select id="monthlyincome" ng-model="user.monthlyincome">
+                             <option value="less1.5k" checked>0 - $ 1,500</option>
+                             <option value="1.5-3k">$ 1,500 - $ 3,000</option>
+                             <option value="3-5k">$ 3,000 - $ 5,000</option>
+                             <option value="5-10k">$ 5,000 - $ 10,000</option>
+                             <option value="10-15k">$ 10,000 - $ 15,000</option>
+                             <option value="10plus">$ 10,000+</option>
+                           </select>
+                        </div>
+                     </div>
+                  
+                    <br>
+                     <div id="ppdiv">
+                         <p id="pp" class="text-justify">
+                           I agree to the Terms of Use and the Privacy Policy.  I agree to the Terms of Use and the Privacy Policy. 
+                        </p>
+                       </div>
+                  <br>
+
+                 </fieldset>
+
+
+
+
+            <button type="submit" id="submitButton" class="btn btn-default btn-xlarge pull-right" ng-disabled="scheduleForm.$invalid" ><strong><span>Submit</span></strong></button>
+          </form>
+        </div><!-- end of loanForm -->
+      {{user}}       
+      </div><!-- end of row -->
+    </div>
+  </div><!-- end of row -->
+</div><!-- end of container -->
+
+<br><br>
+
+         
+
+       
+                     
+                        
+                          
+                  
+
+
+
+
+
+
+<!--
+ <br><br>      
+                  <fieldset> 
+                    
+                     <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                           <p>Date</p>
+                           <input id="date" type="date" name="date" 
+                           ng-model="user.date" ng-required="true">
+                           <p class="error" ng-show="scheduleForm.date.$invalid && scheduleForm.date.$touched">Please select a date.</p>
+
+
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                           <p>Time</p>
+                           <input id="time" type="time" name="time" 
+                           ng-model="user.time" ng-required="true">
+                           <p class="error" ng-show="scheduleForm.time.$invalid && scheduleForm.time.$touched">Please input a time, this way we can best serve you.</p>
+                        </div>
+                     </div>
+                     <br>
+                     <strong>Contact Information </strong><br>
+                        <div class="row">
+                           <div class="col-xs-12 col-md-6">
+                              <p>First Name</p>
+                              <input id="firstname" type="text" name="firstname" 
+                              ng-model="user.firstname" ng-required="true">
+                              <p class="error" ng-show="scheduleForm.firstname.$invalid && scheduleForm.firstname.$touched">We need your first name.</p>
+                           </div>
+                           <div class="col-xs-12 col-md-6">
+                              <p>Last Name</p>
+                              <input id="lastname" type="text" name="lastname" 
+                              ng-model="user.lastname" ng-required="true">
+                              <p class="error" ng-show="scheduleForm.lastname.$invalid && scheduleForm.lastname.$touched">Please enter your last name.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-xs-12 col-md-6">
+                              <p>Telephone</p>
+                              <input id="tel" type="number" name="telephone" 
+                              ng-model="user.telephone" ng-required="true">
+                              <p class="error" ng-show="scheduleForm.telephone.$invalid && scheduleForm.telephone.$touched">You must enter a phone number.</p>
+                           </div>
+                           <div class="col-xs-12 col-md-6">
+                              <p>Email</p>
+                              <input id="email" type="email" name="email" 
+                              ng-model="user.email" ng-required="true">
+                              <p class="error" ng-show="scheduleForm.email.$invalid && scheduleForm.email.$touched">This must be a valid email</p>
+                           </div>
+                        </div>
+                        
+                  </fieldset>
+
+<br><br>
+            <button class="btn btn-default btn-xlarge pull-right" ng-disabled="scheduleForm.$invalid"><strong><span id="scheduleFont">Send</span></strong></button>
+
+-->
+
+
+
+
+
+
+

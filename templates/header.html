@@ -1,0 +1,244 @@
+<style>
+#logo{
+	margin-left: 30px;
+}
+
+.header{
+	
+	background: whitesmoke;
+	background: black;
+}
+.headerInfo{
+	
+	margin: 0px;
+}
+.contactInfo{
+	
+	margin: 0;
+}
+h3{
+	margin:0px;
+	padding:0px;
+}
+h4{
+	margin: 0px;
+}
+.contactInfoWrapper{
+	margin-top: 0px;
+
+}
+
+
+a{
+	color: whitesmoke;
+	border: 1px solid purple;
+}
+.whitesmoke{
+	color: whitesmoke;
+}
+
+
+.dropdown-menu{
+	background: black;
+
+}
+.dropdown-menu>li>a {
+	background-color: black;
+	border: 1px solid purple;
+
+}
+
+.dropdown-menu>li>a:hover {
+	background: whitesmoke;
+	color: black;
+	}
+
+.liAdditionalDropdownInfo{
+	color: whitesmoke;
+	font-weight: 100;
+}
+
+.dropdown-menu>li>a, .dropdown-menu>li>a:focus{
+	color: whitesmoke;
+
+}
+
+.navbar{
+	background-color: black;
+	padding: 0px;
+	margin-left: 0px;
+	margin-rigth: 1px;
+	border: 0px solid black;
+	box-shadow: 0px 1px 1px 0px rgba(0, 8, 0, 0.2), 0 6px 20px 0 rgba(0, 4, 0, 0.19);
+
+}
+.navbar-default .navbar-nav>li>a{
+	color: whitesmoke;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+	color: black;
+	background-color: whitesmoke;
+}
+
+.icon-bar{
+	border: 2px solid whitesmoke;
+}
+@media screen and (max-width: 500px){
+	
+	
+	.logo{
+		 margin-left: 37px;
+	}
+	.headerInfo{
+		justify-content: center;
+	}
+	.centerContactInfo{
+		text-align: center;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a {  
+		color: whitesmoke;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {  
+		color: black;
+		background: whitesmoke;
+	}
+}
+.navbar .nav>li>a {
+	text-shadow: 0 0px 0 #ffffff;
+	font-size: 16px;
+}
+body{
+	padding: 0px;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	border:1px solid black;
+}
+
+
+@media screen and (max-width: 500px) {
+  .contactMaxWidthClass{
+	float: center;
+	padding-top: 0px;
+	padding-right: 0px;
+  }
+ #logo{
+ 	padding-left: 90px;
+ 	padding-top: 15px;
+ }
+
+}
+
+@media screen and (min-width: 500px) {
+     .contactMaxWidthClass{
+	float: right;
+	padding-top: 15px;
+	padding-right: 15px;
+   }
+
+ }
+
+.navbar .nav>li>a{
+	font-size: 18px;
+}
+.dropdown-menu>li>a, .dropdown-menu>li>a:focus{
+	font-size: 18px;
+}
+.navbar .nav>li>a{
+	border: 1px solid purple;
+}
+
+</style>
+
+
+<div class="header">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-9">
+			
+			<img id="logo" src="edris/logo.png" alt="logo" height="120" width="250">
+			
+			</div>
+			
+			<div class="col-xs-12 col-sm-3 contactInfoWrapper">
+				<span class="whitesmoke contactInfo"><h3 class="centerContactInfo contactMaxWidthClass">510-227-1870<h3></span>
+			
+				<p class="whitesmoke contactInfo">
+					<h4 class="centerContactInfo contactMaxWidthClass">sales@iconmotors.com</h4>
+				</p>
+			</div>
+		
+		
+		</div><!-- end of row -->
+	</div>
+
+
+	
+
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+
+		<section class="navbar">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false">
+				    <span class="sr-only">Toggle Navigation</span>
+					<span class="icon-bar whitesmoke"></span>
+					<span class="icon-bar whitesmoke"></span>
+					<span class="icon-bar whitesmoke"></span>
+				</button>
+			</div><!-- end of navbar-header -->
+
+			<div class="collapse navbar-collapse" id="collapseMenu">
+				<ul class="nav navbar-nav">
+					<li><a href="#/main" class="newFont">Home</a></li>
+					<li><a href="#/sellmycar" class="newFont">Sell My Car</a></li>
+					<li><a href="#/loan" class="newFont">Financing</a></li>
+					<li class="dropdown">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">Our Dealership <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+							<li class="liAdditionalDropdownInfo"><a tabindex="-1" href="#/about"><span class="additionalDropdownInfo">About Us</span></a></li>
+							<li class="liAdditionalDropdownInfo"><a tabindex="-1" href="#/contact"><span class="additionalDropdownInfo">Contact Us</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- end of navbar collapse -->
+
+			
+		</section><!-- navbar -->
+	</div><!-- end of container -->
+
+</nav>
+
+</div><!--  end of 1st div tag with class header -->
+
+<script>
+$(function(){
+	//make menu dropdown automatically
+	$('ul.nav li.dropdown').hover(function(){
+		$('dropdown-menu', this).fadeIn();       		  //hover in
+	}, function(){
+		$('dropdown-menu', this).fadeOut('fast');		  //hover out 'fast" is a speed prameter'
+	});
+
+});//jQuery is loaded
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

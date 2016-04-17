@@ -1,0 +1,430 @@
+<style>
+	.parameterBox{
+		
+		width: 100%;
+		height: 541px;
+		margin: 3px;
+		
+
+
+	}
+	
+
+
+
+	.mainInventory{
+		border: 1px solid whitesmoke;
+		width: 270px;
+		height: 280px;
+
+	}
+
+	@media screen and (max-width: 500px){
+		.imageNormal{
+		width: 297px;
+		height: 220px;
+	  }
+	  .bigBox{
+		border: 3px solid whitesmoke;
+		width: 297px;
+		height: 220px;
+	  }
+	}
+
+	@media screen and (min-width: 500px){
+		.imageNormal{
+		margin-top: 20px;
+		width: 100%;
+		height: 100%;
+	   }
+	}
+
+/*
+	@media screen and (min-width: 1000px){
+		.imageNormal{
+		margin-top: 20px;
+		width: 500px;
+		height: 395px;
+		} 
+	}
+	*/
+
+.modalheight{
+	height: 530px;
+}
+.centerBlock {
+	display: table;
+	margin: 0 auto;
+}
+
+.btn{
+	color: #2a6496;
+	padding: 10px 15px 10px 15px;
+
+	margin: 2px;
+}
+
+h3 {
+    margin: 0px;
+    padding-top: 4px;
+    margin: 6px;
+}
+.circle{
+
+    
+    
+    line-height: normal;
+	position: relative;
+	z-index: 40;
+	float: right;
+
+}
+.fontYear{
+	font-size: small;
+
+}
+.fontPrice{
+	font-size:x-large;
+
+}
+
+.modal-footer{
+padding: 25px;
+}
+#banner{
+	border: 1px solid purple;
+
+	height: 400px;
+}
+
+
+</style>
+
+<style>
+#bannerone{
+	border: 1px solid black;
+	background: red;
+	height: 199px;
+	width: 100%;
+
+}
+#bannertwo{
+	border: 1px solid blue;
+	background: blue;
+	height: 199px;
+	width: 100%;
+}
+#bannerthree{
+	border: 1px solid black;
+	background: purple;
+	height: 199px;
+	width: 100%;
+
+}
+
+#bannerfour{
+	border: 1px solid yellow;
+	background: orange;
+	height: 199px;
+	width: 100%;
+}
+
+
+
+</style>
+
+
+
+	<div class="modal fade modalheight" id="{{modalId}}" tabIndex="-1" role="dialog" aria-labeledby="car1ID">
+		
+		<div class="dialog modal-md" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h3 class="modal-title" id="car1ID">{{notes}}</h3>
+				</div>
+
+				<div class="modal-body modalheight" align="content">
+				<!--  ///////////////////////////////////////////////////////////////////////////// -->
+					
+						
+						
+						<div class="row parameterBox">
+						  <div class="bigBox">
+						  	<img class="imageNormal" src="{{main}}" alt="">
+						  	<img class="imageNormal" src="{{pic1}}" alt="">
+						  	<img class="imageNormal" src="{{pic2}}" alt="">
+						  	<img class="imageNormal" src="{{pic3}}" alt="">
+						  	<img class="imageNormal" src="{{pic4}}" alt="">
+
+						</div>
+
+						
+						
+						
+						
+
+					</div>
+				
+
+				<!-- ////////////////////////////////////////////////////////////////////////////// -->
+				</div><!-- modal body -->
+
+
+
+				<div class="modal-footer">
+					<button class="btn btn-default" data-dismiss="modal"><strong>Close</strong></button>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+
+		
+
+	<div class="container-fluid">
+		<div class="row">
+		 <div id="banner" class="col-xs-12 col-md-4">
+		 	<div class="col-xs-12 col-md-6">
+		 		<div id="bannerone" class="col-xs-12 col-md-6">
+		 		
+			 	</div>
+			 	
+			 		
+		  </div>
+		  
+
+		 	
+		 	<div class="col-xs-12 col-md-6">
+		 		
+			 	<div  id="bannerfour" class="col-xs-12 col-md-6">
+			 		
+			 	</div>
+		 		
+
+		 	</div>
+		  </div>
+
+
+		  <div class="col-xs-12 col-md-6 col-md-offset-1">
+		    	 <div ng-include="'carousel/carousel.html'"> </div>
+		    <!-- <div ng-include="'section/mainsection.html'"> </div> -->
+		  </div>  
+		  
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+		  <div >
+		    <!-- <div ng-include="'carousel/carousel.html'"> </div> -->
+		    <!-- <div ng-include="'section/mainsection.html'"> </div> -->
+		    <div ng-include="'section/search.html'"> </div>
+		  </div>   
+		</div>
+	</div>
+
+
+
+
+ 
+
+	<!-- IMPORTANT: *********** Edris, add new cars below ************* -->
+
+
+		<div class="row centerBlock">
+
+	<!-- car1  -->
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<div class="centerBlock">
+				   <div  class="thumbnail mainInventory"><img data-toggle="magnify" src="edris/car1/images/main.jpg"   alt="">
+				  	<a href="#" class="btn btn-default btn-lg pull-right circle" data-toggle="modal" data-target="#{{car1.id}}"  ng-click="modal(car1.id, car1.notes)"><strong><span class="button"> Info</span></strong></a>
+					   <table>
+					   		<tr>
+					   			<td><span class="fontYear">{{car1.year}}</span></td>
+					   		</tr>
+					   		<tr>
+					   			<td><br></td>
+					   		</tr>
+					   		<tr>
+					   			<td><p>$ <span class="fontPrice"> {{ car1.price}}</span></p></td>
+					   		</tr>
+					   </table>  
+					   
+				  </div> <!-- end of mainInventory -->
+			  </div><!-- end of centerBlock -->
+			</div>
+
+	<!-- car2  -->
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<div class="centerBlock">
+				   <div  class="thumbnail mainInventory"><img  ng-click="mag()" src="edris/car2/images/main.jpg"  alt="">
+				  	<a href="#" class="btn btn-default btn-lg pull-right circle" data-toggle="modal" data-target="#{{car2.id}}" ng-click="modal(car2.id, car2.notes)"><strong><span class="button"> Info</span></strong></a>
+					   <table>
+					   		<tr>
+					   			<td><span class="fontYear">{{car2.year}}</span></td>
+					   		</tr>
+					   		<tr>
+					   			<td><br></td>
+					   		</tr>
+					   		<tr>
+					   			<td><p>$ <span class="fontPrice"> {{car2.price}}</span></p></td>
+					   		</tr>
+					   </table>  
+					   
+				  </div> <!-- end of mainInventory -->
+			  </div><!-- end of centerBlock -->
+			</div>
+
+	<!-- car3  -->
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<div class="centerBlock">
+				   <div  class="thumbnail mainInventory"><img src="edris/car3/images/main.jpg" data-toggle="magnify" alt="">
+				  	<a href="#" class="btn btn-default btn-lg pull-right circle" data-toggle="modal" data-target="#{{car3.id}}" ng-click="modal(car3.id, car3.notes)"><strong><span class="button"> Info</span></strong></a>
+					   <table>
+					   		<tr>
+					   			<td><span class="fontYear">{{car3.year}}</span></td>
+					   		</tr>
+					   		<tr>
+					   			<td><br></td>
+					   		</tr>
+					   		<tr>
+					   			<td><p>$ <span class="fontPrice"> {{car3.price}}</span></p></td>
+					   		</tr>
+					   </table>  
+					   
+				  </div> <!-- end of mainInventory -->
+			  </div><!-- end of centerBlock -->
+			</div>
+
+	<!-- car4 -->
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<div class="centerBlock">
+				   <div  class="thumbnail mainInventory"><img src="edris/car4/images/main.jpg" data-toggle="magnify" alt="">
+				  	<a href="#" class="btn btn-default btn-lg pull-right circle" data-toggle="modal" data-target="#{{car4.id}}" ng-click="modal(car4.id, car4.notes)"><strong><span class="button"> Info</span></strong></a>
+					   <table>
+					   		<tr>
+					   			<td><span class="fontYear">{{car4.year}}</span></td>
+					   		</tr>
+					   		<tr>
+					   			<td><br></td>
+					   		</tr>
+					   		<tr>
+					   			<td><p>$ <span class="fontPrice"> {{car4.price}}</span></p></td>
+					   		</tr>
+					   </table>  
+					   
+				  </div> <!-- end of mainInventory -->
+			  </div><!-- end of centerBlock -->
+			</div>
+
+	<!-- car5  -->
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<div class="centerBlock">
+				   <div  class="thumbnail mainInventory"><img src="edris/car5/images/main.jpg" data-toggle="magnify" alt="">
+				  	<a href="#" class="btn btn-default btn-lg pull-right circle" data-toggle="modal" data-target="#{{car5.id}}" ng-click="modal(car5.id, car5.notes)"><strong><span class="button"> Info</span></strong></a>
+					   <table>
+					   		<tr>
+					   			<td><span class="fontYear">{{car5.year}}</span></td>
+					   		</tr>
+					   		<tr>
+					   			<td><br></td>
+					   		</tr>
+					   		<tr>
+					   			<td><p>$ <span class="fontPrice"> {{car5.price}}</span></p></td>
+					   		</tr>
+					   </table>  
+					   
+				  </div> <!-- end of mainInventory -->
+			  </div><!-- end of centerBlock -->
+			</div>
+
+	<!-- car6  -->
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<div class="centerBlock">
+				   <div  class="thumbnail mainInventory"><img src="edris/car6/images/main.jpg" data-toggle="magnify" alt="">
+				  	<a href="#" class="btn btn-default btn-lg pull-right circle" data-toggle="modal" data-target="#{{car6.id}}" ng-click="modal(car6.id, car6.notes)"><strong><span class="button"> Info</span></strong></a>
+					   <table>
+					   		<tr>
+					   			<td><span class="fontYear">{{car6.year}}</span></td>
+					   		</tr>
+					   		<tr>
+					   			<td><br></td>
+					   		</tr>
+					   		<tr>
+					   			<td><p>$ <span class="fontPrice"> {{car6.price}}</span></p></td>
+					   		</tr>
+					   </table>  
+					   
+				  </div> <!-- end of mainInventory -->
+			  </div><!-- end of centerBlock -->
+			</div>
+
+	<!-- car7  -->
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<div class="centerBlock">
+				   <div  class="thumbnail mainInventory"><img src="edris/car7/images/main.jpg" data-toggle="magnify" alt="">
+				  	<a href="#" class="btn btn-default btn-lg pull-right circle" data-toggle="modal" data-target="#{{car7.id}}" ng-click="modal(car7.id, car7.notes)"><strong><span class="button"> Info</span></strong></a>
+					   <table>
+					   		<tr>
+					   			<td><span class="fontYear">{{car7.year}}</span></td>
+					   		</tr>
+					   		<tr>
+					   			<td><br></td>
+					   		</tr>
+					   		<tr>
+					   			<td><p>$ <span class="fontPrice"> {{car7.price}}</span></p></td>
+					   		</tr>
+					   </table>  
+					   
+				  </div> <!-- end of mainInventory -->
+			  </div><!-- end of centerBlock -->
+			</div>
+			
+	<!-- car8 -->
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<div class="centerBlock">
+				   <div  class="thumbnail mainInventory"><img src="edris/car8/images/main.jpg" data-toggle="magnify" alt="">
+				  	<a href="#" class="btn btn-default btn-lg pull-right circle" data-toggle="modal" data-target="#{{car8.id}}" ng-click="modal(car8.id, car8.notes)"><strong><span class="button"> Info</span></strong></a>
+					   <table>
+					   		<tr>
+					   			<td><span class="fontYear">{{car8.year}}</span></td>
+					   		</tr>
+					   		<tr>
+					   			<td><br></td>
+					   		</tr>
+					   		<tr>
+					   			<td><p>$ <span class="fontPrice"> {{car8 .price}}</span></p></td>
+					   		</tr>
+					   </table>  
+					   
+				  </div> <!-- end of mainInventory -->
+			  </div><!-- end of centerBlock -->
+			</div>
+
+
+
+
+			
+	<!-- IMPORTANT: ************** Edris, add new cars above **************** -->
+		</div>
+
+
+
+
+    
+ 
+<div  ui-view></div>
+
+<script>
+function mag(){
+	
+ $('.container img').magnify();
+}
+</script>

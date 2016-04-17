@@ -1,0 +1,454 @@
+
+
+
+<style>
+
+#test{
+  color: white;
+}
+p{
+
+   margin-top: 5px;
+   margin-bottom: 0px;
+   font-size: 14px;
+}
+.textCenter{
+  text-align: center;
+}
+#dataForm{
+  background: whitesmoke;
+  padding: 30px;
+
+  border: 1px solid pink;
+
+    padding-left: 45px;
+    
+
+
+}
+.btn-xlarge {
+    color: #2a6496;
+    padding: 18px 28px;
+    font-size: 16px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    }
+  #scheduleFont{
+    font-size: 16px;
+  }
+  input{
+     height: 40px;
+   width: 253px;
+   padding-left: 5px;
+
+  }
+  .centerBlock {
+  display: table;
+  margin: 0 auto;
+}
+#id{
+  height: 45px;
+  padding-left:17px;
+
+}
+#price{
+  height: 45px;
+  padding-left:17px;
+   width: 100%;
+}
+#year{
+  height: 45px;
+  padding-left:17px;
+   width: 100%;
+}
+#make{
+  height: 45px;
+  padding-left:17px;
+   width: 100%;
+}
+#model{
+  height: 45px;
+  padding-left:17px;
+   width: 100%;
+}
+#mpg{
+  height: 45px;
+  padding-left:17px;
+   width: 100%;
+}
+#mileage{
+  height: 45px;
+  padding-left:17px;
+   width: 100%;
+}
+#transmission{
+  height: 45px;
+  padding-left:17px;
+   width: 100%;
+}
+#clylinder{
+  height: 45px;
+  padding-left:17px;
+   width: 100%;
+} 
+#status{
+  height: 45px;
+  padding-left:17px;
+   width: 100%;
+} 
+#mainpic{
+	height: 35px;
+  padding-left:17px;
+
+}
+#pic1{
+	height: 35px;
+  padding-left:17px;
+
+}
+#pic2{
+	height: 35px;
+  padding-left:17px;
+
+} 
+#pic3{
+	height: 35px;
+  padding-left:17px;
+
+}
+#pic4{
+	height: 35px;
+  padding-left:17px;
+
+}
+
+input.ng-invalid.ng-touched{
+  border: 1px solid #DA3637;
+}
+input.ng-valid.ng-touched{
+  border: 1px solid #509D12;
+}
+#legend{
+	color: #DA3637;
+}
+.error{
+  color: #DA3637;
+
+}
+#dashboardTitle{
+	color: #2a6496;
+}
+#controlPanel{
+  
+  margin-bottom: 15px;
+  color: black;
+
+  text-align: center;
+  
+  
+  
+  
+  
+  
+  
+
+}
+
+#notes{
+  width: 100%;
+  height: 90px;
+}
+#inputdata{
+  color: white;
+}
+#ppdiv{
+  
+  padding: 15px;
+
+}
+#pp{
+font-size: 10;
+font-weight: 600;
+color: red;
+
+}
+#test{
+  color: white;
+}
+#test2{
+  color: whitesmoke;
+}
+</style>
+
+
+<h1 id="test">WARNING You must be an adminis</h1>
+
+<div class="container-fluid" ng-controller="dashboardCtrl">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+<!-- TOP TOP TOP -->
+      
+      <div id="controlPanel" class="centerBlock">
+      <h3>Control Panel</h3>
+      <p>You must be an Administor in order to update Control Panel</p>
+
+     
+      </div>
+
+ 
+
+<div id="dataForm" class="col-xs-12 centerBlock">
+ <p><strong>All updates are in real-time</strong></p><br>
+         <form name="updateDataForm" novalidate="novalidate"  class="centerBlock" ng-submit="test(id, data)">
+            <fieldset>
+            <div class="row">
+             <div class="col-xs-12 col-md-6">
+              <p>Select Vehicle</p>
+              <select id="id" ng-model="id">
+                  <option value="car1" checked>Car 1</option>
+                  <option value="car2">Car 2</option>
+                  <option value="car3">Car 3</option>
+                  <option value="car4">Car 4</option>
+                  <option value="car5" >Car 5</option>
+                  <option value="car6">Car 6</option>
+                  <option value="car7">Car 7</option>
+                  <option value="car8">Car 8</option>
+                  <option value="car9">Car 9</option>
+                  <option value="car10">Car 10</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                 <p>Price</p>
+                 <input id="price" type="number" name="price" 
+                 ng-model="data.price" ng-required="true">
+                 <p class="error" ng-show="updateDataForm.time.$invalid && updateDataForm.time.$touched">You must enter a price for this vehicle</p>
+            </div>
+            </div><!-- end of row -->
+
+
+
+             <div class="row">
+
+               <div class="col-xs-12 col-md-6">
+               <p>Year</p>
+                  <select id="year" ng-model="data.year">
+                    <option value="2001" checked>2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005" >2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                  </select>
+               </div>
+
+              <div class="col-xs-12 col-md-6">
+              <p>Make</p>
+                  <select id="make" ng-model="data.make">
+                    <option value="Acura" checked>Acura</option>
+                    <option value="Audi">Audi</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Buick">Buick</option>
+                    <option value="Cadillac" >Cadillac</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Chrysler">Chrysler</option>
+                    <option value="Corvette">Corvette</option>
+                    <option value="Dodge">Dodge</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="Fiat">Fiat</option>
+                    
+                       <option value="Ford">Ford</option>
+                    <option value="GMC">GMC</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Infiniti" >Infiniti</option>
+                    <option value="Isuzu">Isuzu</option>
+                    <option value="Jaguar">Jaguar</option>
+                    <option value="Jeep">Jeep</option>
+                    <option value="Lamborghini">Lamborghini</option>
+                    <option value="Land Rover">Land Rover</option>
+                    <option value="Lexus">Lexus</option>
+                    <option value="Lincoln">Lincoln</option>
+                    <option value="Lotus">Lotus</option>
+                    <option value="Mazda">Mazda</option>
+                    <option value="Mercedes">Mercedes</option>
+                    <option value="Mini">Mini</option>
+                    <option value="Mitsubishi">Mitsubishi</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Peugeot">Peugeot</option>
+                    <option value="Porsche">Porsche</option>
+                    <option value="Saab">Saab</option>
+                    <option value="Subaru" >Subaru</option>
+                   <option value="Suzuki">Suzuki</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Volvo">Volvo</option>
+                    <option value="Oldsmobile">Oldsmobile</option>
+                   <option value="Pontiac">Pontiac</option>
+                   <option value="Saturn">Saturn</option>
+
+                 </select> 
+               </div>
+              </div><!-- end of row -->
+
+               <div class="row">
+                     <div class="col-xs-12 col-md-6">
+                        <p>Model</p>
+                        <input id="model" type="text" name="model" 
+                        ng-model="data.model" ng-required="true">
+                        <p class="error" ng-show="updateDataForm.telephone.$invalid && updateDataForm.telephone.$touched">You must enter model of vehicle</p>
+                     </div>
+                     <div class="col-xs-12 col-md-6">
+                        <p>MPG</p>
+                         <select id="mpg" ng-model="data.mpg">
+                          <option value="10-13 MPG" checked>10-13</option>
+                          <option value="12-15 MPG">12-15</option>
+                          <option value="13-16 MPG">13-16</option>
+                          <option value="15-18 MPG">15-18</option>
+                          <option value="15-20 MPG" >15-20</option>
+                          <option value="17-20 MPG">17-20</option>
+                          <option value="18-22 MPG">18-22</option>
+                          <option value="20-23 MPG">20-23</option>
+                          <option value="21-24 MPG">21-24</option>
+                          <option value="22-25 MPG">22-25</option>
+                          <option value="23-26 MPG">23-26</option>
+                          <option value="24-27 MPG">24-27</option>
+                          <option value="25-27 MPG">25-27</option>
+                          <option value="26-28 MPG">26-28</option>
+                          <option value="26-30 MPG">26-30</option>
+                          <option value="34-38 MPG">34-38</option>
+                          <option value="34-40 MPG">34-40</option>
+                          <option value="36-40 MPG">36-40</option>
+                          <option value="38-42 MPG">38-42</option>
+                          <option value="47-54 MPG">47-54</option>
+                          <option value="53-60 MPG">53-60</option>
+                          <option value="60+ MPG">60+</option>
+                          <option value="70+ MPG">70+</option>
+
+                        </select>
+                        
+                     </div>
+                  </div><!-- end of row -->
+
+                  <div class="row">
+                     <div class="col-xs-12 col-md-6">
+                        <p>Mileage</p>
+                        <input id="mileage" type="number" name="mileage" 
+                        ng-model="data.mileage" ng-required="true">
+                        <p class="error" ng-show="updateDataForm.telephone.$invalid && updateDataForm.telephone.$touched">Average miles per gallon</p>
+                     </div>
+                     <div class="col-xs-12 col-md-6">
+                        <p>Transmission</p>
+                        <select id="transmission" ng-model="data.transmission">
+                          <option value="Automatic" checked>Automatic</option>
+                          <option value="Manual">Manual</option>
+                          <option value="Hybrid">Hybrid</option>
+                          <option value="Electric">Electric</option>
+                        </select>
+                        
+                     </div>
+                  </div><!-- end of row -->
+
+                   <div class="row">
+                     <div class="col-xs-12 col-md-6">
+                        <p>Clylinder</p>
+                         <select id="clylinder" ng-model="data.clylinder">
+                          <option value="4 Clinder" checked>4 Cylinder</option>
+                          <option value="6 Clinder">6 Cylinder</option>
+                          <option value="8 Clinder">8 Cylinder</option>
+                          <option value="12 Clinder">12 Cylinder</option>
+                        </select>
+                       
+                     </div>
+                     <div class="col-xs-12 col-md-6">
+                        <p>Status</p>
+                         <select id="status" ng-model="data.status">
+                          <option value=" Pending" checked>Pending</option>
+                          <option value=" Sold">Sold</option>
+                        </select>
+                      
+                     </div>
+                  </div>
+                   <div class="row">
+                     <div class="col-xs-12">
+                        <p>Notes</p>
+                        <textarea id="notes" type="text" name="notes" 
+                        ng-model="data.notes" width="auto"></textarea> 
+                        
+                     </div>
+                   
+                  </div><!-- end of row -->
+
+
+
+
+
+
+
+
+
+
+
+        </fieldset>
+         <span id="ppdiv">
+           <span id="pp" class="text-justify">
+             <strong>WARNING </strong> All changes are in real-time, website will be updated immediately<span id="test2">All changes are in real-time updates website immediately are in real-time updates website immediatelyAll </span>
+          </span>
+         </span>
+<br><br>
+           <button type="submit" class="btn btn-default btn-xlarge pull-right"><strong><span id="scheduleFont">Update</span></strong></button>
+        </form>
+
+
+
+
+ 
+      </div><!-- end of dataForm -->
+<!-- BOTTOM BOTTOM BOTTOM -->
+    </div><!-- end of column -->
+  </div><!-- end of row -->
+</div><!-- end of container -->
+<br><br>
+
+
+
+
+
+
+<!-- 
+
+  <fieldset> 
+             
+              
+               
+                
+
+                 
+              
+                 
+                 
+                   
+                  
+                 
+                  
+            </fieldset>
+
+-->
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+<h1 id="test">This is contact page</h1>
+
+<style>
+#contact{
+  margin-bottom: 20px;
+  
+  
+
+}
+
+#test{
+  color: white;
+}
+#address{
+
+}
+.centerBlock {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+}
+.btn-xlarge {
+    color: white;
+    padding: 18px 28px;
+    font-size: 16px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    }
+</style>
+
+<div class="container">
+  <div class="row">
+  
+  
+    <div id="address" class="col-xs-12 col-md-6 centerBlock"  ng-class="{'col-md-6': isReplyMapOpen }">
+      <h2>Icon Motors</h2>
+      <h4>1200 Thornton Avenue Newark CA 94560</h4>
+      
+      <span><h4>510-227-1870</h4><h5>sales@iconmotors.com</h5></span>
+      <button class="btn btn-primary btn-xlarge" ng-click="isReplyMapOpen = !isReplyMapOpen">Map It</button><br><br>
+      
+    </div>
+
+      <div class="col-xs-12 col-md-6" >
+    <div id="contact" ng-show="isReplyMapOpen">
+    <!-- AIzaSyCWh0-Ireeat3fme1J4QnTgcbyLo306OK0 -->
+
+      <iframe
+      class="pull-right centerBlock"
+      width="500"
+      height="400"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCWh0-Ireeat3fme1J4QnTgcbyLo306OK0
+        &q= Icon Motors 1200 Thornton,Newark+CA" allowfullscreen>
+    </iframe>
+    </div>
+    </div>
+
+    </div>
+  </div><br><br><br>
+
+
+<script>
+
+
+/*
+THIS IS COOL
+<a ng-click="isReplyFormOpen = !isReplyFormOpen">Reply</a>
+ <div ng-show="isReplyFormOpen" id="replyForm">
+   </div>
+
+*/
+
+
+</script>
+
+
+

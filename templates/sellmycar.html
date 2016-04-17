@@ -1,0 +1,208 @@
+
+
+<style>
+
+#test{
+  color: white;
+}
+p{
+
+   margin-top: 5px;
+   margin-bottom: 0px;
+   font-size: 14px;
+}
+.textCenter{
+  text-align: center;
+}
+#sellMyCar{
+  border: 3px solid whitesmoke;
+  padding: 30px;
+  padding-left: 45px;
+  margin: 15px;
+
+}
+.btn-xlarge {
+    color: #2a6496;
+    padding: 18px 28px;
+    font-size: 16px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    }
+  #scheduleFont{
+    font-size: 16px;
+  }
+  input{
+     height: 50px;
+   width: 253px;
+   padding-left: 5px;
+
+  }
+  .centerBlock {
+  display: table;
+  margin: 0 auto;
+}
+#firstname{
+  height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#lastname{
+  height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#tel{
+  height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#date{
+  height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#time{
+  height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+#email{
+  height: 45px;
+  padding-left:17px;
+  width: 100%;
+}
+
+input.ng-invalid.ng-touched{
+  border: 1px solid #DA3637;
+}
+input.ng-valid.ng-touched{
+  border: 1px solid #509D12;
+}
+.error{
+  color: #DA3637;
+
+}
+#ppdiv{
+  
+  padding: 15px;
+
+}
+#pp{
+font-size: 10;
+font-weight: 600;
+color: white;
+margin-right: 10px;
+}
+#message{
+  color: purple;
+  margin-left: 30px;
+}
+#test{
+  color: white;
+}
+</style>
+
+
+<h1 id="test">This is consignment page.</h1>
+
+<div class="container-fluid" ng-controller="sellMyCarCtrl">
+   <div class="row">
+
+<!-- TOP TOP TOP -->
+
+      <div  class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="row">
+         <h3 class="textCenter">List your car with Icon Motors in Newark</h3>
+          <p class="textCenter">Schedule an appraisal or stop by at your convenience.</p>
+          <p ng-show="message"><strong id="message">{{message}}</strong></p>
+
+<!-- LEFT LEFT LEFT -->
+<div id="sellMyCar">
+        
+        <form name="scheduleForm" novalidate class="centerBlock" ng-submit="feedback(user)">
+ <br>      <p>Most appraisals take less than 30 minutes.</p>
+                  <fieldset> 
+                     <strong>When can you come in?</strong><br>
+                     <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                           <p>Date</p>
+                           <input id="date" type="date" name="date" 
+                           ng-model="user.date" ng-required="true">
+                           <p class="error" ng-show="scheduleForm.date.$invalid && scheduleForm.date.$touched">Please select a date.</p>
+
+
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                           <p>Time</p>
+                           <input id="time" type="time" name="time" 
+                           ng-model="user.time" ng-required="true">
+                           <p class="error" ng-show="scheduleForm.time.$invalid && scheduleForm.time.$touched">Please input a time, this way we can best serve you.</p>
+                        </div>
+                     </div>
+                     <br>
+                     <strong>Contact Information </strong><br>
+                        <div class="row">
+                           <div class="col-xs-12 col-md-6">
+                              <p>First Name</p>
+                              <input id="firstname" type="text" name="firstname" 
+                              ng-model="user.firstname" ng-required="true">
+                              <p class="error" ng-show="scheduleForm.firstname.$invalid && scheduleForm.firstname.$touched">We need your first name.</p>
+                           </div>
+                           <div class="col-xs-12 col-md-6">
+                              <p>Last Name</p>
+                              <input id="lastname" type="text" name="lastname" 
+                              ng-model="user.lastname" ng-required="true">
+                              <p class="error" ng-show="scheduleForm.lastname.$invalid && scheduleForm.lastname.$touched">Please enter your last name.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-xs-12 col-md-6">
+                              <p>Telephone</p>
+                              <input id="tel" type="number" name="telephone" 
+                              ng-model="user.telephone" ng-required="true">
+                              <p class="error" ng-show="scheduleForm.telephone.$invalid && scheduleForm.telephone.$touched">You must enter a phone number.</p>
+                           </div>
+                           <div class="col-xs-12 col-md-6">
+                              <p>Email</p>
+                              <input id="email" type="email" name="email" 
+                              ng-model="user.email" ng-required="true">
+                              <p class="error" ng-show="scheduleForm.email.$invalid && scheduleForm.email.$touched">This must be a valid email</p>
+                           </div>
+                        </div>
+                        <span id="ppdiv">
+                         <span id="pp" class="text-justify">
+                           I agree to the Terms of Use and the Privacy Policy. <span id="test"> I agree to the Terms of Use and the Privacy Policy. </span>
+                        </span>
+                       </span>
+
+                        
+                  </fieldset>
+
+
+            <button class="btn btn-default btn-xlarge pull-right" ng-disabled="scheduleForm.$invalid"><strong><span id="scheduleFont">Send</span></strong></button>
+
+
+
+</form>
+</div><!-- end of sellMyCar -->
+</div>
+</div>
+</div>
+</div>
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
